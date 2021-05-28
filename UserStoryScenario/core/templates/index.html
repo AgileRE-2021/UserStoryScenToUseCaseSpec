@@ -46,9 +46,10 @@
                 </tr>
             </thead>
             <tbody>
+              {% for project in data %}
                 <tr>
-                    <td class="text-left">1</td>
-                    <td>Alex Mike</td>
+                    <td class="text-left">{{project.id_project}}</td>
+                    <td>{{project.project_name}}</td>
 
                     <td class="td-actions text-right">
                       <a href="/inputdata.html"  >
@@ -66,6 +67,7 @@
                         </button>
                     </td>
                 </tr>
+              {% endfor %}
             </tbody>
         </table>
                 </div>

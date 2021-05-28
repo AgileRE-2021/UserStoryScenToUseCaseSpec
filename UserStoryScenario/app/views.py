@@ -8,6 +8,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template
+from django.shortcuts import render
+from .models import project
 
 @login_required(login_url="/login/")
 def index(request):
@@ -40,3 +42,12 @@ def pages(request):
     
         html_template = loader.get_template( 'page-500.html' )
         return HttpResponse(html_template.render(context, request))
+
+@login_required(login_url="/login/")
+def index(request):
+    hasil = project.objects.all()
+    print(hasil) ## untuk lihat hasilnya silahkan liat diterminal
+    data = {
+        'data':hasil,
+    }   
+    return render(request,"index.html",data)
