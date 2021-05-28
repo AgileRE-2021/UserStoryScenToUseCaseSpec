@@ -1,0 +1,60 @@
+{% extends "layouts/base.html" %}
+
+from django.contrib.auth.forms import UserCreationForm
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<!-- Form Tambah Data User Story  -->
+<div class="row">
+    <div class="col-md-12">
+        <h4 > Hasil Generate</h4>
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title"> Use Case Specification</h4>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th >Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Use Case Name</td>
+                    <td > NAMA NYA USE CASE</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td > Pencuri</td>
+                </tr>
+            </tbody>
+        </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+
+{% endblock javascripts %}
