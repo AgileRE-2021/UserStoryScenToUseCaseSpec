@@ -14,14 +14,15 @@
         <h4 class="card-title"> Tambah Project</h4>
       </div>
       <div class="card-body">
-          <form>
+          <form method="POST">
+            {% csrf_token %} 
             <div class="form-group">
-              <label for="exampleaddFeature">Nama Project</label>
-              <input type="add_feature" class="form-control" id="exampleaddfeature"  placeholder="Input Feature">
+              <label for="project_name">Nama Project</label>
+              <input type="text" class="form-control" name="project_name" id="project_name" value="" placeholder="Input Project Name">
             </div>
             <div class="form-group">
-                <label for="exampleaddaction">Deskripsi Project</label>
-                <input type="add_action" class="form-control" id="exampleaddaction"  placeholder="Input action">
+                <label for="project_desc">Deskripsi Project</label>
+                <input type="text" class="form-control" name="project_desc" id="project_desc" value=""  placeholder="Input Project Desc">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -29,6 +30,8 @@
             </div>
           </div>
         </div>
+
+       
       
   <div class="row">
     <div class="col-md-12">
@@ -46,10 +49,10 @@
                 </tr>
             </thead>
             <tbody>
-              {% for project in data %}
+              {% for hasil in data %}
                 <tr>
-                    <td class="text-left">{{project.id_project}}</td>
-                    <td>{{project.project_name}}</td>
+                    <td class="text-left">{{hasil.id_project}}</td>
+                    <td>{{hasil.project_name}}</td>
 
                     <td class="td-actions text-right">
                       <a href="/inputdata.html"  >

@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from django import template
 from django.shortcuts import render
 from .models import project
+from .forms import projectForm
 
 @login_required(login_url="/login/")
 def index(request):
@@ -43,7 +44,8 @@ def pages(request):
         html_template = loader.get_template( 'page-500.html' )
         return HttpResponse(html_template.render(context, request))
 
-@login_required(login_url="/login/")
+
+@login_required(login_url="/login/") 
 def index(request):
     hasil = project.objects.all()
     print(hasil) ## untuk lihat hasilnya silahkan liat diterminal
@@ -51,3 +53,13 @@ def index(request):
         'data':hasil,
     }   
     return render(request,"index.html",data)
+
+@login_required(login_url="/login/")
+def tambah(request):
+    form = projectForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        pass
+    return render(request,"index.html",{'form': form})
