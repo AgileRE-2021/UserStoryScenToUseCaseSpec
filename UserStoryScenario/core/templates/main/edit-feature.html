@@ -3,7 +3,13 @@
 {% block title %} Dashboard {% endblock %} 
 
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<style>
+    .test{
+        background-color:#15b96d;
+    }
+</style>
+{% endblock stylesheets %}
 
 {% block content %}	
 
@@ -26,10 +32,18 @@
                                     <input type="text" class="form-control" name="featureName" id="featureName" value="{{ context.feature.feature_name }}" required>
                                 </div>
                                 <div class="form-group">
-                                    <h6>User Story</h6>
-                                    <input type="text" class="form-control" id="userStory" name="userStory" value="{{ context.feature.user_story }}" required>
-                                    <small id="userStory" class="form-text text-muted">Format: As a [role], I want to [action], so that I [benefit]</small>
+                                    <h6>Action</h6>
+                                    <input type="text" class="form-control" name="featureAction" id="featureAction" value="{{ context.feature.feature_action }}" required>
                                 </div>
+                                <div class="form-group">
+                                    <h6>Actor</h6>
+                                    <input type="text" class="form-control" name="featureActor" id="featureActor" value="{{ context.feature.feature_actor }}" required>
+                                </div>
+                                <div class="form-group">
+                                    <h6>Feature Benefit</h6>
+                                    <input type="text" class="form-control" name="featureBenefit" id="featureBenefit" value="{{ context.feature.feature_benefit }}" required>
+                                </div>
+
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <h6>User Scenario</h6>
@@ -126,17 +140,17 @@
                                                                 <div class="form-group col-md-2">  
                                                                     <select class="form-control" name="scenario{{ p.id_scenario }}-condition{{ cn.id_condition }}-tipe" value="{{ cn.tipe }}" required>
                                                                         {% if cn.tipe == "Given"  %}
-                                                                            <option selected>Given</option>
-                                                                            <option>When</option>
-                                                                            <option>Then</option>
+                                                                            <option selected class="test">Given</option>
+                                                                            <option class="test">When</option>
+                                                                            <option class="test">Then</option>
                                                                         {% elif cn.tipe == "When" %}
-                                                                            <option>Given</option>
-                                                                            <option selected>When</option>
-                                                                            <option>Then</option>
+                                                                            <option class="test">Given</option>
+                                                                            <option selected class="test">When</option>
+                                                                            <option class="test">Then</option>
                                                                         {% else %}
-                                                                            <option>Given</option>
-                                                                            <option>When</option>
-                                                                            <option selected>Then</option>
+                                                                            <option class="test">Given</option>
+                                                                            <option class="test">When</option>
+                                                                            <option selected class="test">Then</option>
                                                                         {% endif %}
                                                                     </select>
                                                                 </div>

@@ -19,7 +19,9 @@ class feature(models.Model):
     project = models.ForeignKey(project, on_delete=models.CASCADE)
     id_feature = models.AutoField(primary_key=True)
     feature_name = models.CharField(max_length=100)
-    user_story = models.CharField(max_length=100)
+    feature_action = models.CharField(max_length=100,default='null')
+    feature_actor = models.CharField(max_length=100,default='null')
+    feature_benefit = models.CharField(max_length=100, default='null')
     date_created = models.DateTimeField()
     last_updated = models.DateTimeField()
 

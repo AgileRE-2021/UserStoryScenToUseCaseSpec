@@ -3,7 +3,13 @@
 {% block title %} Dashboard {% endblock %} 
 
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<style>
+    .test{
+        background-color:#15b96d;
+    }
+</style>
+{% endblock stylesheets %}
 
 {% block content %}	
 
@@ -15,7 +21,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5>Add Feature</h5>
-                            <p>{{ context.project.project_name }}</p>
+                            <p>Project Name :  {{ context.project.project_name }}</p>
                             <hr>
                             <form id="form-scenario" method="POST" enctype="multipart/form-data" class="post-form" action="/add-feature/store">
                                 {% csrf_token %}
@@ -25,10 +31,18 @@
                                     <input type="text" class="form-control" name="featureName" id="featureName" placeholder="Enter Feature Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <h6>User Story</h6>
-                                    <input type="text" class="form-control" id="userStory" name="userStory" placeholder="Enter User Story" required>
-                                    <small id="userStory" class="form-text text-muted">Format: As a #role#, I want to #action#, so that I #benefit#</small>
+                                    <h6>Action</h6>
+                                    <input type="text" class="form-control" name="featureAction" id="featureAction" placeholder="I want to #Action" required>
                                 </div>
+                                <div class="form-group">
+                                    <h6>Actor</h6>
+                                    <input type="text" class="form-control" name="featureActor" id="featureActor" placeholder="As an #Actor" required>
+                                </div>
+                                <div class="form-group">
+                                    <h6>Feature Benefit</h6>
+                                    <input type="text" class="form-control" name="featureBenefit" id="featureBenefit" placeholder="So that I #benefit" required>
+                                </div>
+                                
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <h6>User Scenario</h6>

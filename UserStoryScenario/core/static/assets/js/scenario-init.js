@@ -64,13 +64,16 @@ for(let i=0; i<rowCount; i++){
         let o = document.createElement("option");
         if(i == 0){
             o.setAttribute('selected', true);
+            o.setAttribute('style', "background-color: #15b96d");
             o.innerHTML = "Given";
         }
         else if(i == 1){
             o.innerHTML = "When";
+            o.setAttribute('style', "background-color: #15b96d");
         }
         else{
             o.innerHTML = "Then";
+            o.setAttribute('style', "background-color: #15b96d");
         }
         s.appendChild(o)
     }

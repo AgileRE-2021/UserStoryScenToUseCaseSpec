@@ -155,14 +155,18 @@ def addFeature(request, project_id):
 def addFeatureHasil(request):
     getProject = get_object_or_404(project, pk=request.POST.get("project_id"))
     featureName = request.POST.get("featureName")
-    userStory = request.POST.get("userStory")
+    featureAction = request.POST.get("featureAction")
+    featureActor = request.POST.get("featureActor")
+    featureBenefit = request.POST.get("featureBenefit")
     dateCreated = timezone.now()
     lastUpdated = timezone.now()
 
     #create feature baru
     newFeature = feature(project=getProject
                         ,feature_name=featureName
-                        ,user_story=userStory
+                        ,feature_action=featureAction
+                        ,feature_actor=featureActor
+                        ,feature_benefit=featureBenefit
                         ,date_created=dateCreated
                         ,last_updated=lastUpdated)
 
@@ -309,13 +313,17 @@ def updateFeature(request):
     #project_to_edit = get_object_or_404(project, pk=request.POST.get("project_id"))
     feature_to_edit = get_object_or_404(feature, pk=request.POST.get("feature_id"))
     featureName = request.POST.get("featureName")
-    userStory = request.POST.get("userStory")
+    featureAction = request.POST.get("featureAction")
+    featureActor = request.POST.get("featureActor")
+    featureBenefit = request.POST.get("featureBenefit")
     dateCreated = timezone.now()
     lastUpdated = timezone.now()
 
     #update feature baru
     feature_to_edit.feature_name = featureName
-    feature_to_edit.user_story = userStory
+    feature_to_edit.feature_action = featureAction
+    feature_to_edit.feature_actor = featureActor
+    feature_to_edit.feature_benefit = featureBenefit
     feature_to_edit.last_updated = lastUpdated
 
     #save feature baru
