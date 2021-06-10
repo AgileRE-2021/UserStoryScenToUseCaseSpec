@@ -20,7 +20,7 @@ def index(request):
 
     html_template = loader.get_template( 'index.html' )
     #return HttpResponse(html_template.render(context, request))
-    return redirect('tutorial')
+    return redirect('list-project')
 
 @login_required(login_url="/login/")
 def mainIndex(request):
