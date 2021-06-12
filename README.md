@@ -25,10 +25,11 @@ Repository ini merupakan Project milik Kelompok 2 dari kelas I2 Matakuliah Pemba
   * [Sistem Pembangun](#sistem-pembangun)
 * [Petunjuk Instalasi](#petunjuk-instalasi)
 * [Petunjuk Penggunaan](#petunjuk-penggunaan)
-* [Informasi Lainnya](informasi-lainnya)
+* [Informasi Lainnya](#informasi-lainnya)
   * [Anggota Proyek](#anggota-proyek)
   * [Tanggal Rilis](#tanggal-rilis)
   * [Kontak](#kontak)
+* [Lisensi](#lisensi)
 
 <!-- TENTANG PROYEK -->
 # ✨ Tentang Proyek 
@@ -95,7 +96,7 @@ Informasi kontak setiap anggota lebih detail dapat dilihat di bawah ini.
 6. Boy Ardan Wiratama             : nama@gmail.com
 7. Farhat		                      : nama@gmail.com
 
-# 📝 License
+# 📝 Lisensi
 
 Copyright © 2021 [Kelompok 2](https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec).<br />
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
