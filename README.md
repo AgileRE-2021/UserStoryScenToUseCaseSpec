@@ -75,13 +75,13 @@ Tanggal .. Juni 2021
 
 ### Kontak 
 Informasi kontak setiap anggota lebih detail dapat dilihat di bawah ini. 
-1. Cerelia Devina Tantia V. N.    : nama@gmail.com
-2. Luthfia Rachmawati             : nama@gmail.com
-3. Hilmi Rafif Fajari             : nama@gmail.com
-4. Pravadipta Riksadyani Pambudi  : nama@gmail.com
-5. Muhammad Faisal Basuki         : nama@gmail.com
-6. Boy Ardan Wiratama             : nama@gmail.com
-7. Farhat		                      : nama@gmail.com
+1. Cerelia Devina Tantia V. N.    : cereliadevinaa@gmail.com
+2. Luthfia Rachmawati             : luthfia.rachmawati@gmail.com
+3. Hilmi Rafif Fajari             : hilmirf23@gmail.com
+4. Pravadipta Riksadyani Pambudi  : riksadyani@gmail.com
+5. Muhammad Faisal Basuki         : mfaisalbasuki@gmail.com
+6. Boy Ardan Wiratama             : boyardan57@gmail.com
+7. Farhat		                       : farhathmd0505@gmail.com
 
 # 📝 Lisensi
 
