@@ -5,14 +5,6 @@
 [![GitHub Release](https://img.shields.io/badge/release-1.0-blue)]()
 
 Repository ini merupakan Project milik Kelompok 2 dari kelas I2 Matakuliah Pembangunan Perangkat Lunak, dimana Project ini bertujuan dapat melakukan Generate dari User Story Scenario ke Use Case Specification
-<!-- PROJECT DESCRIPTION-->
-<br />
-<p align="center">
-  Use Case Specification Generator
-  <br />
-  <a href="https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec"><strong>Project »</strong></a>
-  <br />
-</p>
 
 # Daftar Isi
 * [Tentang Proyek](#tentang-proyek)
@@ -49,7 +41,7 @@ Aplikasi Use Case Specification Generator dibangun dengan memanfaatkan *software
 - [Javascript](javascript.com)
 
 # 🚀 Petunjuk Instalasi 
-Petunjuk mengenai prosedur instalasi untuk aplikasi CDG dilakukan pada sesi terminal, berikut prosedur yang dapat dilakukan :
+Petunjuk mengenai prosedur instalasi untuk aplikasi dilakukan pada sesi terminal, berikut prosedur yang dapat dilakukan :
 1. Lakukan *clone* pada repositori
    ```sh
    git clone https://github.com/AgileRE-2021/alamat.git
@@ -61,7 +53,7 @@ Petunjuk mengenai prosedur instalasi untuk aplikasi CDG dilakukan pada sesi term
 3. dan selanjutnya
 
 # 📖 Petunjuk Penggunaan
-Petunjuk mengenai prosedur penggunaan aplikasi CDG dapat dilihat pada bagian di bawah ini :
+Petunjuk mengenai prosedur penggunaan aplikasi dapat dilihat pada bagian di bawah ini :
 1. ...
 2. ...
 3. ...
