@@ -5,18 +5,13 @@
 [![GitHub Release](https://img.shields.io/badge/release-1.0-blue)]()
 
 Repository ini merupakan Project milik Kelompok 2 dari kelas I2 Matakuliah Pembangunan Perangkat Lunak, dimana Project ini bertujuan dapat melakukan Generate dari User Story Scenario ke Use Case Specification
-<!-- PROJECT LOGO -->
+<!-- PROJECT DESCRIPTION-->
 <br />
 <p align="center">
-  <a href="https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec">
-  <img src="***logo***" alt="Logo" width="500" height="500">
-  </a>
-
-  <p align="center">
-    Use Case Specification Generator
-    <br />
-    <a href="https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec"><strong>Project »</strong></a>
-    <br />
+  Use Case Specification Generator
+  <br />
+  <a href="https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec"><strong>Project »</strong></a>
+  <br />
 </p>
 
 # Daftar Isi
