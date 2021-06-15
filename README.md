@@ -22,8 +22,8 @@ Repository ini merupakan Project milik Kelompok 2 dari kelas I2 Matakuliah Pemba
 # ✨ Tentang Proyek 
 ### Definisi
 USCG (*Use Case Specification Generator*) merupakan aplikasi yang bertujuan untuk mengubah User Stories Scenario menjadi Use Case Specification. Berikut adalah penjelasan dari masing-masing artefak yang dilibatkan dalam aplikasi ini. 
->- **User Stories Scenario** merupakan ...
->- **Use Case Specification** merupakan ...
+User Stories Scenario merupakan sebuah narasi yang menjelaskan urutan aktivitas yang dilakukan oleh user selama menggunakan aplikasi. User Stories Scenario mampu menggambarkan langkah-langkah, aksi atau tindakan pada kondisi tertentu tentang user saat berinteraksi dengan sebuah sistem.
+Use Case Specification merupakan deskripsi singkat tentang langkah-langkah yang diperlukan untuk menggambarkan use case, lalu langkah-langkahnya dibuat untuk menambahkan lebih detail yang disebut dengan use case specification.
 
 Secara garis besar, komponen pembentuk dari Use Case Specification sebagai *output* yang dihasilkan terbentuk melalui komponen input, yaitu :
 1. Nama Use Case :
