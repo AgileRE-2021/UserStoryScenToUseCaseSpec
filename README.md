@@ -98,8 +98,7 @@ Informasi kontak setiap anggota lebih detail dapat dilihat di bawah ini.
 
 # 📝 Lisensi
 
-Copyright © 2021 [Kelompok 2](https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec).<br />
-This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
+Copyright © 2021 Universitas Airlangga
 
 ---
 <br/>
