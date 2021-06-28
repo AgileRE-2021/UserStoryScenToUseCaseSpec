@@ -1,0 +1,68 @@
+{% extends "layouts/base.html" %}
+
+from django.contrib.auth.forms import UserCreationForm
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<!-- Form Tambah Data User Story  -->
+<div class="row">
+    <div class="col-md-12">
+<h4 > Data User Story Secnario</h4>
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title"> Edit Data User Story Scenario</h4>
+      </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleaddFeature">Add Feature</label>
+          <input type="add_feature" class="form-control" id="exampleaddfeature"  placeholder="Input Feature">
+        </div>
+        <div class="form-group">
+            <label for="exampleaddaction">Add Action</label>
+            <input type="add_action" class="form-control" id="exampleaddaction"  placeholder="Input action">
+          </div>
+          <div class="form-group">
+            <label for="exampleaddrole">Add Role</label>
+            <input type="add_role" class="form-control" id="exampleaddroles"  placeholder="Input role">
+          </div>
+          <div class="form-group">
+            <label for="exampleaddbenefit">Add Benefit</label>
+            <input type="add_benefit" class="form-control" id="exampleaddbenefit"  placeholder="Input benefit">
+          </div>
+          <div class="form-group">
+            <label for="exampleaddRules">Add Rules</label>
+            <input type="add_rules" class="form-control" id="exampleaddrules"  placeholder="Input rules">
+            <div class="form-group col-md-12 mb-5">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+      
+    </form>
+    </div>
+</div>
+</div>
+</div>
+
+  
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+
+{% endblock javascripts %}

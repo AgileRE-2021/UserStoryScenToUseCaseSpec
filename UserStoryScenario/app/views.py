@@ -147,8 +147,6 @@ def addFeature(request, project_id):
     context['project_id'] = project_id
     context['project'] = get_object_or_404(project, pk=project_id)
     counts = {}
-  
-    #html_template = loader.get_template( 'main/detail-project.html' )
     return render(request, 'main/add-feature.html', {'context': context})
 
 @login_required(login_url="/login/")
@@ -361,8 +359,14 @@ def pages(request):
         return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
-def hasilgenerate(request, feature_id,project_id):
+def hasilgenerate(request, feature_id, project_id):
     context = {}
+
+    context['project_id'] = project_id
+    context['project'] = get_object_or_404(project, pk=project_id)
+
+    context['feature_id'] = feature_id
+    context['feature'] = get_object_or_404(feature, pk=feature_id)
 
 
     return render(request, 'main/hasil-generate.html', {'context': context})
