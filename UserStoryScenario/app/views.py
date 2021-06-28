@@ -440,3 +440,8 @@ def pages(request):
     
         html_template = loader.get_template( 'page-500.html' )
         return HttpResponse(html_template.render(context, request))
+
+@login_required(login_url="/login/")
+def hasilgenerate(request, project_id, feature_id):
+    
+    return redirect('hasil-generate', project_id=request.POST.get("project_id")) 

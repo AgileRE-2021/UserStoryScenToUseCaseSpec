@@ -52,4 +52,7 @@ urlpatterns = [
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),
 
+    #GENERATE
+    path('hasil-generate/<int:project_id>/<int:feature_id>', views.hasilgenerate, name='hasil-generate'),
+    
 ]
