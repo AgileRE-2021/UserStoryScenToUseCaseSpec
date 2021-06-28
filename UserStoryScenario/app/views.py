@@ -360,13 +360,24 @@ def pages(request):
 
 @login_required(login_url="/login/")
 def hasilgenerate(request, feature_id, project_id):
+    #ambil project
     context = {}
-
     context['project_id'] = project_id
     context['project'] = get_object_or_404(project, pk=project_id)
 
+    #ambil fitur yang ingin digenerate
     context['feature_id'] = feature_id
     context['feature'] = get_object_or_404(feature, pk=feature_id)
 
+    #ambil semua scenario sesuai fiturnya
+    context['scenario'] = scenario.objects.filter(feature=context['feature'])
+    
+    #ambil condition berdasar scenario
+    context['condition'] = []
+    for s in context['scenario']:
+        context['condition'].append(condition.objects.filter(scenario=s))
+
 
     return render(request, 'main/hasil-generate.html', {'context': context})
+
+ 

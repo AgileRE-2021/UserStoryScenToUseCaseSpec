@@ -1,4 +1,4 @@
-{% extends "layouts/base.html" %}
+{% extends "main/layouts/base.html" %}
 
 from django.contrib.auth.forms import UserCreationForm
 
@@ -27,27 +27,27 @@ from django.contrib.auth.forms import UserCreationForm
             <tbody>
                 <tr>
                     <td>Use Case Name</td>
-                    <td > Name Feature</td>
+                    <td >{{ context.feature.feature_name }}</td>
                 </tr>
                 <tr>
                     <td>Role</td>
-                    <td > As an #Actor</td>
+                    <td >{{ context.feature.feature_actor }}</td>
                 </tr>
                 <tr>
                   <td>Action</td>
-                  <td > I want to #Action </td>
+                  <td > {{ context.feature.feature_action }} </td>
                 </tr>
                 <tr>
                   <td>Initial Condition</td>
-                  <td > Given </td>
+                  <td > {{ context.condition.tipe }} {{ context.condition.content }} </td>
                 </tr>
                 <tr>
                   <td>Final Condition</td>
-                  <td > So that I can #Benefit </td>
+                  <td > {{ context.feature.feature_benefit }} </td>
                 </tr>
                 <tr>
                   <td>Normal Scenario</td>
-                  <td > Scenario Name #1 </td>
+                  <td > {% for p in context.scenario %} {{ p.scenario_name }}</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -66,7 +66,8 @@ from django.contrib.auth.forms import UserCreationForm
                 </tr>
                 <tr>
                   <td>Alternative Scenario</td>
-                  <td>Scenario name #2</td>
+                  <td>{{ p.scenario_name }}</td>
+                  {% endfor %}
                 </tr>
                 <tr>
                   <td></td>
