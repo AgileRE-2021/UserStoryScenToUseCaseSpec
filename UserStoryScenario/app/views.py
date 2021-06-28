@@ -245,42 +245,6 @@ def addFeatureHasil(request):
 
             #save newCondition
             newCondition.save()
-
-    '''
-    #create setiap scenario yang dibuat
-    tipe = False
-    content = False
-    for key in request.POST:
-        #hanya ambil request yg berhubungan sama scenario
-        if(
-            key != 'project_id' 
-            and key != 'featureName' 
-            and key != 'userStory'):
-
-            if(tipe == False):
-                #cek key adalah tipe atau content
-                if("tipe" in key):
-                    #masuk tipe
-                    tipe = request.POST[key]
-            
-            if(content == False):
-                if("content" in key):
-                    #masuk content
-                    content = request.POST[key]
-
-            if(tipe != False and content != False):
-                #create scenario form
-                newScenario = scenario(feature=getFeature
-                                    ,tipe=tipe
-                                    ,content=content
-                                    ,date_created=dateCreated
-                                    ,last_updated=lastUpdated)
-
-                #save scenario baru
-                newScenario.save()
-                tipe = False
-                content = False
-    '''
   
     #html_template = loader.get_template( 'main/detail-project.html' )
     return redirect('detail-project', project_id=request.POST.get("project_id"))
@@ -370,51 +334,6 @@ def updateFeature(request):
                 #save
                 conditionToUpdate.save()
 
-    '''scenarios = scenario.objects.filter(feature=feature_to_edit)
-    for s in scenarios:
-        tipe = False
-        content = False
-        scenario_id = False
-        for key in request.POST:
-            #hanya ambil request yg berhubungan sama scenario
-            if(
-                key != 'project_id' 
-                and key != 'feature_id'
-                and key != 'featureName' 
-                and key != 'userStory'):
-
-                if(scenario_id == False):
-                    if("scenario_id" in key):
-                        #masuk scenario id
-                        scenario_id = request.POST[key]
-
-                if(tipe == False):
-                    if("tipe" in key):
-                        #masuk tipe
-                        tipe = request.POST[key]
-                
-                if(content == False):
-                    if("content" in key):
-                        #masuk content
-                        content = request.POST[key]
-                
-                if(tipe != False and content != False and scenario_id != False):
-
-                    if(int(s.id_scenario) == int(scenario_id)):
-                        #edit
-                        s.tipe = tipe
-                        s.content = content 
-                        s.last_updated = lastUpdated
-
-                        #save edit
-                        s.save()
-
-                    #kembalikan tipe, content, dan scenario id jadi false
-                    tipe = False
-                    content = False
-                    scenario_id = False
-    '''
-
     #html_template = loader.get_template( 'main/detail-project.html' )
     return redirect('detail-project',  project_id=request.POST.get("project_id"))
 
@@ -442,6 +361,8 @@ def pages(request):
         return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
-def hasilgenerate(request, project_id, feature_id):
-    
-    return redirect('hasil-generate', project_id=request.POST.get("project_id")) 
+def hasilgenerate(request, feature_id,project_id):
+    context = {}
+
+
+    return render(request, 'main/hasil-generate.html', {'context': context})
