@@ -1,9 +1,65 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/layout-login.html" %}
 
 {% block title %} Register {% endblock %} 
-
+{% load static %}
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<style>
+  .card{
+    margin-top: -30px;
+    position:absolute;
+    top: 50%;
+    left: 35%;
+    transform:translate (-50%, -50%);
+    width:400px;
+    
+
+  }
+  .card-header{
+    
+    top: 50%;
+    left: 50%;
+    
+    width: 400px;
+  }
+  .card-header h5{
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  .card-header h6{
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  .card-header h6 img{
+    height: 100px;
+    weight: 100px;
+  }
+  .card .card-body {
+    margin-top: -30px;
+    position:relative;
+    top: 50%;
+    left: 20%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+  .card .card-footer {
+    position:relative;
+    margin-top: -30px;
+    top: 50%;
+    left: 27%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+  .card .card-footer .gapunya{
+    position:relative;
+    margin-top: 10px;
+    top: 10%;
+    left: -4%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+</style>
+{% endblock stylesheets %}
 
 {% block content %}
 
@@ -22,7 +78,7 @@
                       {% if msg %}
                         <span class="text-danger">{{ msg | safe }}</span>
                       {% else %}
-                        Add your credentials 
+                      <img src="{% static 'assets/img/logo_putih.png' %}">
                       {% endif %}  
                   </h6>
                 </div>
@@ -38,7 +94,7 @@
                 <div class="card-body">
 
                     <div class="row">
-                      <div class="col-md-3 px-md-1">
+                      <div class="col-md-7 px-md-1">
                         <div class="form-group">
                           <label>Username</label>
                           {{ form.username }}
@@ -48,7 +104,7 @@
                     <span class="text-danger">{{ form.username.errors }}</span>
 
                     <div class="row">
-                      <div class="col-md-3 px-md-1">
+                      <div class="col-md-7 px-md-1">
                         <div class="form-group">
                           <label>Email</label>
                           {{ form.email }}
@@ -58,7 +114,7 @@
                     <span class="text-danger">{{ form.email.errors }}</span>
 
                     <div class="row">
-                      <div class="col-md-3 px-md-1">
+                      <div class="col-md-7 px-md-1">
                         <div class="form-group">
                           <label>Password</label>
                           {{ form.password1 }}
@@ -68,7 +124,7 @@
                     <span class="text-danger">{{ form.password1.errors }}</span>
                     
                     <div class="row">
-                        <div class="col-md-3 px-md-1">
+                        <div class="col-md-7 px-md-1">
                             <div class="form-group">
                             <label>Password Check</label>
                             {{ form.password2 }}
@@ -81,8 +137,10 @@
                 <div class="card-footer">
                   <button type="submit" name="register" class="btn btn-fill btn-primary">Register</button>
                   &nbsp; &nbsp;
+                  <div class="gapunya">
                   Have an account? <a href="{% url 'login' %}" class="text-primary">Login</a>
                 </div>
+              </div>
 
               {% endif %} 
 

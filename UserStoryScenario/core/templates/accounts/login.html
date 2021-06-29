@@ -1,14 +1,67 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/layout-login.html" %}
 
 {% block title %} Login {% endblock %} 
-
+{% load static %}
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<style>
+  .card{
+    position:absolute;
+    top: 50%;
+    left: 70%;
+    transform:translate (-50%, -50%);
+    width:400px;
+    
+
+  }
+  .card-header{
+    
+    top: 50%;
+    left: 50%;
+    
+    width: 400px;
+  }
+  .card-header h5{
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  .card-header h6{
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  .card-header h6 img{
+    height: 100px;
+    weight: 100px;
+  }
+  .card .card-body {
+    position:relative;
+    top: 50%;
+    left: 20%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+  .card .card-footer {
+    position:relative;
+    top: 50%;
+    left: 30%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+  .card .card-footer .gapunya{
+    position:relative;
+    top: 10%;
+    left: -14%;
+    transform:translate (-50%, -50%);
+    width:400px;
+  }
+</style>
+
+{% endblock stylesheets %}
 
 {% block content %}
 
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-4">
             <div class="card">
 
               <form role="form" method="post" action="">  
@@ -16,13 +69,13 @@
                 {% csrf_token %} 
 
                 <div class="card-header">
-                  <h5 class="title">Login</h5>
+                  <h5 class="title">LOGIN </h5>
 
                   <h6 class="card-category">
                       {% if msg %}
                         <span class="text-danger">{{ msg | safe }}</span>
                       {% else %}
-                        Add your credentials
+                      <img src="{% static 'assets/img/logo_putih.png' %}">
                       {% endif %}  
                   </h6>
                 </div>
@@ -31,7 +84,7 @@
 
                     <div class="row">
 
-                      <div class="col-md-3 px-md-1">
+                      <div class="col-md-7 px-md-1">
                         <div class="form-group">
                           <label>Username</label>
                           {{ form.username }}
@@ -41,7 +94,7 @@
                     </div>
                     <div class="row">
 
-                      <div class="col-md-3 px-md-1">
+                      <div class="col-md-7 px-md-1">
                         <div class="form-group">
                           <label>Password</label>
                           {{ form.password }}
@@ -54,8 +107,11 @@
                 <div class="card-footer">
                   <button type="submit" name="login" class="btn btn-fill btn-primary">Login</button>
                   &nbsp; &nbsp;
+                  <div class ="gapunya">
+
                   Don't have an account? <a href="{% url 'register' %}" class="text-primary">Create</a>
                 </div>
+              </div>
 
               </form>
 
