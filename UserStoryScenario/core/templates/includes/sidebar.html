@@ -2,15 +2,23 @@
       <div class="sidebar-wrapper">
         
         <div class="logo">
-          <a target="_blank" 
-             href="https://www.creative-tim.com/product/black-dashboard-django" class="simple-text logo-mini">
-            PPL
+          <style>
+            .zoom {
+              transition: transform .2s; /* Animation */
+              margin: 0 auto;
+            }
+            .zoom:hover {
+              transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+            </style>
+          {% load static %}
+          <div class="zoom">
+          <a href="/list-project">
+          <img src="{% static 'assets/img/logo_putih.png' %}">
           </a>
-          <a target="_blank" 
-             href="/list-project" class="simple-text logo-normal">
-            GENERATE
-          </a>
+        
         </div>
+      </div>
 
         <ul class="nav">
         {% if request.user.is_authenticated %}
