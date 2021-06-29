@@ -47,8 +47,8 @@ from django.contrib.auth.forms import UserCreationForm
                   <td>Final Condition</td>
                   <td > {{ context.feature.feature_benefit }} </td>
                 </tr>
+                {% for p in context.scenario %}
                 <tr>
-                  {% for p in context.scenario %}
                   <td>{{ p.scenario_name }}</td>
                   <td > Actors </td>
                   <td > Systems </td>
@@ -62,6 +62,7 @@ from django.contrib.auth.forms import UserCreationForm
                   {% else %}
                   <td></td>
                   <td> {{ z.tipe }} {{ z.content }} </td>
+                </tr>
                   {% endif %}
                     {% endfor %}
                 {% endfor %}
