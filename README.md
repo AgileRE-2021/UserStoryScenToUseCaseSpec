@@ -59,11 +59,34 @@ Petunjuk mengenai prosedur instalasi untuk aplikasi dilakukan pada sesi terminal
    ```sh
    git clone https://github.com/AgileRE-2021/alamat.git
    ```
-2. Membuat *virtual environment* pada *python*
+2. Masuk ke direktori/folder UserStoryScenario
    ```sh
-   py -m venv env
+   cd UserStoryScenario
    ```
-3. dan selanjutnya
+3. Lakukan Installasi Django Framework
+   ```sh
+   py -m pip install Django  
+   ```
+4. Lakukan Installasi Semua Modul yang dibutuhkan
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Buat Migrasi untuk tabel pada database
+   ```sh
+   python manage.py makemigrations  
+   ```
+   ```sh
+   python manage.py migrate
+   ```
+6. Proses Installasi Selesai
+7. Jalankan Sistem/Run Server
+   ```sh
+   python manage.py runserver  
+   ```
+8. Akses Aplikasi pada local port melalui browser
+   ```sh
+   http://127.0.0.1:8000/ 
+   ```
 
 # 📖 Petunjuk Penggunaan
 Petunjuk mengenai prosedur penggunaan aplikasi dapat dilihat pada bagian di bawah ini :
