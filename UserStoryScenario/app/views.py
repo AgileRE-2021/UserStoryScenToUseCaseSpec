@@ -373,9 +373,7 @@ def hasilgenerate(request, feature_id, project_id):
     context['scenario'] = scenario.objects.filter(feature=context['feature'])
     
     #ambil condition berdasar scenario
-    context['condition'] = []
-    for s in context['scenario']:
-        context['condition'].append(condition.objects.filter(scenario=s))
+    context['condition'] = condition.objects.filter(scenario__in=context['scenario'])
 
 
     return render(request, 'main/hasil-generate.html', {'context': context})

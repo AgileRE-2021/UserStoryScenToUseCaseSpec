@@ -39,55 +39,32 @@ from django.contrib.auth.forms import UserCreationForm
                 </tr>
                 <tr>
                   <td>Initial Condition</td>
-                  <td > {{ context.condition.tipe }} {{ context.condition.content }} </td>
+                  {% for z in context.condition|slice:"1" %}
+                  <td > {{ z.tipe }} {{ z.content }} </td>
+                  {% endfor %}
                 </tr>
                 <tr>
                   <td>Final Condition</td>
                   <td > {{ context.feature.feature_benefit }} </td>
                 </tr>
                 <tr>
-                  <td>Normal Scenario</td>
-                  <td > {% for p in context.scenario %} {{ p.scenario_name }}</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td > Actors </td>
-                  <td > Systems </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td > bla </td>
-                  <td ></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td ></td>
-                  <td >bla</td>
-                </tr>
-                <tr>
-                  <td>Alternative Scenario</td>
+                  {% for p in context.scenario %}
                   <td>{{ p.scenario_name }}</td>
-                  {% endfor %}
-                </tr>
-                <tr>
-                  <td></td>
                   <td > Actors </td>
                   <td > Systems </td>
                 </tr>
+                {% for z in context.condition|slice:"1:" %}
                 <tr>
                   <td></td>
-                  <td > bla </td>
-                  <td ></td>
+                  {% if z.tipe != 'Then' %}
+                  <td> {{ z.tipe }} {{ z.content }} </td>
                 </tr>
-                <tr>
+                  {% else %}
                   <td></td>
-                  <td ></td>
-                  <td >bla</td>
-                </tr>
-                <tr>
-                  <td>Exception Scenario</td>
-                  <td>Scenario Name #3</td>
-                </tr>
+                  <td> {{ z.tipe }} {{ z.content }} </td>
+                  {% endif %}
+                    {% endfor %}
+                {% endfor %}
             </tbody>
         </table>
                 </div>
