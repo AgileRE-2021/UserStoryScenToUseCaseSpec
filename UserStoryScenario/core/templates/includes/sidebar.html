@@ -28,6 +28,13 @@
               <p>My Project</p>
             </a>
           </li>
+          <li class="{% if 'index' in segment %} active {% endif %} ">
+            <a href="/tutorial">
+              <i class="tim-icons icon-bulb-63"></i>
+              <p>Tutorial How To Use</p>
+            </a>
+          </li>
+          
           <li>
             <a href="{% url 'logout' %}" >
               <i class="tim-icons icon-user-run"></i>
