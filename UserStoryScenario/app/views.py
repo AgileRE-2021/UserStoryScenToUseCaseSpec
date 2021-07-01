@@ -374,6 +374,26 @@ def hasilgenerate(request, feature_id, project_id):
     
     #ambil condition berdasar scenario
     context['condition'] = condition.objects.filter(scenario__in=context['scenario'])
+    givenpos =[]
+    for i in range(len(context['condition'])):
+        if context['condition'][i].tipe == 'Given':
+            givenpos.append(i)
+    #print("Posisi Given",givenpos)
+    banyakgiven = len(givenpos)
+    #print("Banyaknya Given",banyakgiven)
+    #print("banyak given -1",banyakgiven-1)
+    for i in range(0,banyakgiven):
+        print("sekarang i nya",i)
+        if (i == banyakgiven-1):
+            context[f'condition{i+1}'] = context['condition'][givenpos[i]:]
+            print("masuk if")
+        else:
+            context[f'condition{i+1}'] = context['condition'][givenpos[i]:(givenpos[i+1])]
+            print("masuk else")
+
+    #print(context['condition1'])
+    #print(context['condition2'])
+    context['conditionall'] = {}
 
 
     return render(request, 'main/hasil-generate.html', {'context': context})
