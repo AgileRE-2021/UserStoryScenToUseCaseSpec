@@ -108,7 +108,7 @@ Anggota pada proyek pengerjaan aplikasi *Use Case Specification Generator* terdi
 7. Farhat		
 
 ### Tanggal Rilis 
-Tanggal .. Juni 2021
+Tanggal 7 Juli 2021
 
 ### Kontak 
 Informasi kontak setiap anggota lebih detail dapat dilihat di bawah ini. 
