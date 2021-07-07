@@ -98,7 +98,8 @@ Petunjuk mengenai prosedur penggunaan aplikasi dapat dilihat pada bagian di bawa
 5. Kemudian klik "Add Feature", input "Feature Name, Action, Actor, Feature Benefits", lalu klik "Add User Story Scenario Condition"
 6. Untuk membuat User Story Scenario Condition, input "Scenario Name, Given, When, Then"
 7. Untuk menambahkan User Story Scenario yang lain, maka scenario name akan menjadi "wrong password", kondisi pada scenario Then terbatas, sedangkan kondisi pada Given dan When dikumpulkan dari normal scenario atau skenario normal
-8. Untuk melakukan generate dari User Story ke Use Case Specification, lihat pada halaman "Detail Project", lalu klik "Generate"
+8. Untuk melakukan generate dari User Story ke Use Case Specification, lihat pada halaman "Detail Project", lalu klik "Generate" 
+9. Apabila merasa kesulitan dalam menggunakan aplikasi ini, lihat panduan penggunaan dengan klik "Tutorial How To Use" pada halaman "Dashboard"
 
 # 📌 Informasi Lainnya
 ### Anggota Proyek
