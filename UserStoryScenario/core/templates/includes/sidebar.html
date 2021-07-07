@@ -1,50 +1,63 @@
-    <div class="sidebar">
-      <div class="sidebar-wrapper">
-        
-        <div class="logo">
-          <style>
-            .zoom {
-              transition: transform .2s; /* Animation */
-              margin: 0 auto;
-            }
-            .zoom:hover {
-              transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-            }
-            </style>
-          {% load static %}
-          <div class="zoom">
-          <a href="/list-project">
-          <img src="{% static 'assets/img/logo_putih.png' %}">
-          </a>
-        
-        </div>
-      </div>
-
-        <ul class="nav">
-        {% if request.user.is_authenticated %}
-          <li class="{% if 'index' in segment %} active {% endif %} ">
-            <a href="/">
-              <i class="tim-icons icon-chart-pie-36"></i>
-              <p>My Project</p>
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'logout' %}" >
-              <i class="tim-icons icon-user-run"></i>
-              <p>Logout</p>
-            </a>
-          </li>
-          {% else %}
-          <li class="active">
-            <a target="_blank" 
-               href="https://www.creative-tim.com/product/black-dashboard-pro-django">
-              <i class="tim-icons icon-spaceship"></i>
-              <p>PRO Version</p>
-            </a>
-          </li>   
-          {% endif %}
-                    
-        </ul>
-        
-      </div>
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    
+    <div class="logo">
+      <style>
+        .zoom {
+          transition: transform .2s; /* Animation */
+          margin: 0 auto;
+        }
+        .zoom:hover {
+          transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        </style>
+      {% load static %}
+      <div class="zoom">
+      <a href="/list-project">
+      <img src="{% static 'assets/img/logo_putih.png' %}">
+      </a>
+    
     </div>
+  </div>
+
+    <ul class="nav">
+    {% if request.user.is_authenticated %}
+      <li class="{% if 'index' in segment %} active {% endif %} ">
+        <a href="/">
+          <i class="tim-icons icon-chart-pie-36"></i>
+          <p>My Project</p>
+        </a>
+      </li>
+      <li class="{% if 'index' in segment %} active {% endif %} ">
+        <a href="/tutorial">
+          <i class="tim-icons icon-bulb-63"></i>
+          <p>Tutorial How To Use</p>
+        </a>
+      </li>
+      
+      <li>
+        <a href="{% url 'logout' %}" >
+          <i class="tim-icons icon-user-run"></i>
+          <p>Logout</p>
+        </a>
+      </li>
+
+      <div class="logo">
+      
+      </div>
+  
+
+      {% else %}
+      <li class="active">
+        <a target="_blank" 
+           href="https://www.creative-tim.com/product/black-dashboard-pro-django">
+          <i class="tim-icons icon-spaceship"></i>
+          <p>PRO Version</p>
+        </a>
+      </li>   
+      {% endif %}
+                
+    </ul>
+    
+  </div>
+</div>
