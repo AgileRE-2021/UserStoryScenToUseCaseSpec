@@ -91,10 +91,14 @@ Petunjuk mengenai prosedur instalasi untuk aplikasi dilakukan pada sesi terminal
 
 # 📖 Petunjuk Penggunaan
 Petunjuk mengenai prosedur penggunaan aplikasi dapat dilihat pada bagian di bawah ini :
-1. ...
-2. ...
-3. ...
-4. dan selanjutnya
+1. Klik "Create" apabila belum memiliki akun
+2. Input "Username" dan "Password" apabila telah memiliki akun, lalu klik "Login"
+3. Untuk membuat project baru, input "Project Name" dan "Project Description" lalu klik "Submit"
+4. Untuk membuat fitur baru, lihat pada bagian list project lalu klik "Detail"
+5. Kemudian klik "Add Feature", input "Feature Name, Action, Actor, Feature Benefits", lalu klik "Add User Story Scenario Condition"
+6. Untuk membuat User Story Scenario Condition, input "Scenario Name, Given, When, Then"
+7. Untuk menambahkan User Story Scenario yang lain, maka scenario name akan menjadi "wrong password", kondisi pada scenario Then terbatas, sedangkan kondisi pada Given dan When dikumpulkan dari normal scenario atau skenario normal
+8. Untuk melakukan generate dari User Story ke Use Case Specification, lihat pada halaman "Detail Project", lalu klik "Generate"
 
 # 📌 Informasi Lainnya
 ### Anggota Proyek
