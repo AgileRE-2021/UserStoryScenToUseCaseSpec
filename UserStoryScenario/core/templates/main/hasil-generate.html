@@ -22,60 +22,48 @@ from django.contrib.auth.forms import UserCreationForm
                 <tr>
                     <th></th>
                     <th >Description</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Use Case Name</td>
                     <td >{{ context.feature.feature_name }}</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>Role</td>
                     <td >{{ context.feature.feature_actor }}</td>
-                    <td></td>
                 </tr>
                 <tr>
                   <td>Action</td>
                   <td > {{ context.feature.feature_action }} </td>
-                  <td></td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td>Initial Condition</td>
                   {% for z in context.condition|slice:"1" %}
                   <td > {{ z.tipe }} {{ z.content }} </td>
-                  <td></td>
                   {% endfor %}
                 </tr>
                 <tr>
                   <td>Final Condition</td>
                   <td > {{ context.feature.feature_benefit }} </td>
-                  <td></td>
                 </tr>
                 {% for p in context.scenario %}
                 <tr>
                   <td>{{ p.scenario_name }}</td>
                   <td > Actors </td>
                   <td > Systems </td>
-                  <td></td>
                 </tr>
-                  {% for z in context.condition|slice:"1:" %}
+                {% for z in context.condition|slice:"1:" %}
                 <tr>
-                    {% if z.scenario_id == p.id_scenario %}
-                      {% if z.tipe == 'When' %}
-                      <td></td>
-                      <td> {{ z.tipe }} {{ z.content }} </td>
-                      <td></td>
+                  <td></td>
+                  {% if z.tipe != 'Then' %}
+                  <td> {{ z.tipe }} {{ z.content }} </td>
                 </tr>
-                      {% elif z.tipe == 'Given' %}
-                      {% elif z.tipe == 'Then' %}
-                        <td></td>
-                        <td></td>
-                        <td> {{ z.tipe }} {{ z.content }} </td>
+                  {% else %}
+                  <td></td>
+                  <td> {{ z.tipe }} {{ z.content }} </td>
                 </tr>
-                    {% endif %}
-                      {% endif %}
+                  {% endif %}
                     {% endfor %}
                 {% endfor %}
             </tbody>
