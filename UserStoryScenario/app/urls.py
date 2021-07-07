@@ -49,7 +49,6 @@ urlpatterns = [
     #GENERATE
     path('hasil-generate/<int:project_id>/<int:feature_id>', views.hasilgenerate, name='hasil-generate'),
 
-
     # # Add Feature Page
     path('add-feature/<int:project_id>', views.addFeature, name='add-feature'),
     path('add-feature/store', views.addFeatureHasil, name='add-feature-hasil'),

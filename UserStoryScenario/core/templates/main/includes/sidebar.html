@@ -18,11 +18,10 @@
         {% if request.user.is_authenticated %}
           <li class="{% if 'index' in segment %} active {% endif %} ">
             <a href="/">
-              <i class="tim-icons icon-bulb-63"></i>
+              <i class="tim-icons icon-chart-pie-36"></i>
               <p>Data User StoryA</p>
             </a>
           </li>
-          
           <li>
             <a href="{% url 'logout' %}" >
               <i class="tim-icons icon-user-run"></i>
