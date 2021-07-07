@@ -91,7 +91,7 @@ Petunjuk mengenai prosedur instalasi untuk aplikasi dilakukan pada sesi terminal
 
 # 📖 Petunjuk Penggunaan
 Petunjuk mengenai prosedur penggunaan aplikasi dapat dilihat pada bagian di bawah ini :
-1. Klik "Create" apabila belum memiliki akun
+1. Klik "Create" apabila belum memiliki akun dan lakukan pembuatan akun
 2. Input "Username" dan "Password" apabila telah memiliki akun, lalu klik "Login"
 3. Untuk membuat project baru, input "Project Name" dan "Project Description" lalu klik "Submit"
 4. Untuk membuat fitur baru, lihat pada bagian list project lalu klik "Detail"
