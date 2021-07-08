@@ -58,7 +58,7 @@ Aplikasi Use Case Specification Generator dibangun dengan memanfaatkan *software
 Petunjuk mengenai prosedur instalasi untuk aplikasi dilakukan pada sesi terminal, berikut prosedur yang dapat dilakukan :
 1. Lakukan *clone* pada repositori
    ```sh
-   git clone https://github.com/AgileRE-2021/alamat.git
+   git clone https://github.com/AgileRE-2021/UserStoryScenToUseCaseSpec.git
    ```
 2. Masuk ke direktori/folder UserStoryScenario
    ```sh
